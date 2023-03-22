@@ -18,7 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('words', WordController::class)->only([
-    'create',
-    'store',
-]);
+Route::get('/words/form', [WordController::class, 'form']);
+Route::post('/words', [WordController::class, 'receive'])->name('words.receive');

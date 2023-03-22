@@ -1,4 +1,4 @@
-<form method="post" action="{{ route('words.store') }}">
+<form method="post" action="{{ route('words.receive') }}">
     @csrf
     <input type="text" name="word" value="{{ old('word') }}">
     @foreach ($errors->get('word') as $error)
